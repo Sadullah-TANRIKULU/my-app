@@ -2,8 +2,9 @@ import Menu from "./Menu";
 
 
 const Menus = ({menuItems}) => {
+    // console.log(menuItems);
     return ( 
-        <div className="menus">
+        <div className="menus flex ">
             <Menu menuItems={menuItems} />
         </div>
      );

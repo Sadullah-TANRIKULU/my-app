@@ -10,10 +10,12 @@ const allCategories = ["All",...new Set(data.map((item)=> {
 // console.log(allCategories);
 
 const Home = () => {
+    
     const [menuItems, setMenuItems] = useState(data);
+
     const filterItems = (categoryItem) => {
         if (categoryItem === "All") {
-            setMenuItems(data)
+            setMenuItems(data);
         } else {
             const filtered = data.filter((item) => item.category === categoryItem)
             setMenuItems(filtered);
@@ -23,7 +25,7 @@ const Home = () => {
     
 
     return ( 
-        <div className="home">
+        <div className="home flex flex-col gap-4 justify-center items-center ">
             <Header />
             <Categories allCategories={allCategories} filterItems={filterItems} />
             <Menus menuItems={menuItems} />
